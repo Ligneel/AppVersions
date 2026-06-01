@@ -1,8 +1,12 @@
 {
-    "latest_free": "1.0.19",
-    "source_free":"AppShelf",
-    "url_free": "",
-    "latest_paid": "1.3.0",
-    "source_paid":"Patreon",
-    "url_paid": "https://www.patreon.com/posts/skin-companion-0-119154121",
+  "free": {
+    "latest": "1.0.19",
+    "source": "AppShelf",
+    "url": ""
+  },
+  "paid": {
+    "latest": "1.3.0",
+    "source": "Patreon",
+    "url": "https://www.patreon.com/posts/skin-companion-0-119154121"
+  }
 }
