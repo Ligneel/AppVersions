@@ -1,43 +1,20 @@
- "free": {
+{
+  "free": {
     "releases": [
-      {
-        "version": "1.0.20",
-        "changelog": "# Fixes\n- fix for skins applying on multiple cars\n# New\n- added something to notify of newer app versions",
-        "min_csp_build": 2900,
-        "min_csp_label": "0.2.0p3",
-        "sources": [
-          { "type": "Patreon", "url": "myurl" },
-          { "type": "AppShelf" }
-        ]
-      },
-      {
-        "version": "1.0.19",
-        "changelog": "# Fixes\n- fixed crash when no skin is active\n- fixed ui not refreshing after skin change",
-        "sources": [
-          { "type": "Patreon", "url": "myurl" },
-          { "type": "AppShelf" }
-        ]
-      }
+      
     ]
   },
   "paid": {
     "releases": [
       {
-        "version": "1.2.0",
-        "changelog": "# Performance\n- major performance improvements (skins applied over multiple frames + less stuff kept in ram)\n# New\n- better skin support (shader replacements from all possible ext config sources, in proper order)\n- added live car preview\n- added a way to update skin companion car previews to match live preview from in game\n- new menu fading with the rest of the window\n- new buttons to change livery to either original skin or default look\n- added something to see who is running the app online as well as what skin they are using (in debug section)\n# Fixes\n- fixed default skin not applying properly online",
-        "min_csp_build": 2900,
-        "min_csp_label": "0.2.0p3",
+        "version": "2.0.0",
+        "changelog": "# New features\n- Live 3D car preview (replaces static image; drag/click to rotate, wheel to zoom, right-click to reset)\n- Content Manager preview generation with a custom preset (per-skin or all-at-once, delete-all also available)\n- Notification icon for newer versions and CSP recommendations\n# Reworked skin application\n- Multi-frame progressive pipeline: skins queued and applied over time for stable FPS\n- Full ext-config shader replacement support (all locations, correct order)\n- SKINS= filtering with ? wildcards for per-livery shader replacements\n- Per-LOD support for textures and shader replacements\n- Materials made unique before apply to prevent cross-car visual bleed on shared models\n- Reduced RAM: original car shaders fetched on demand instead of cached at startup\n- Remote skins apply 1 shader replacement per frame (kinder to fps online); local skins apply faster\n# UI\n- New app menu that fades with the window (Patreon icon moved here)\n- Customizable fade behavior with separate settings for driving and replay\n- Full fade above 5 km/h (skips app render while driving)\n- Skin grid: first icon is 'no skin', second is the original skin (shown as '?' when missing locally)\n- Some skin-icon draw perf improvements\n# QoL\n- Skin info collection async at startup\n- Live skin reload when files change on disk (textures + ext_configs, within what's supported)\n- CM-generated previews moved from car folder into the app folder\n- Temporary _NO_SKIN_ folder auto-cleaned after preview generation\n- Log file rotation (keeps last 10)\n- Async log writes (off main thread)\n# Fixes\n- Fixed default skin not applying properly online\n# Known issues\n- CM occasionally fails to refocus AC after preview generation (click back manually if it happens)\n- Live preview framing assumes car is on the ground; mid-air replays may look off-centered\n- Shader compilation on first apply can add up to ~3ms in some cases (planned fix next release)\n- Driver head missing in some F1 camera modes\n- Preview forces highest LOD for the selected car; may interfere with LOD-tweaking tools\n# CSP compatibility\n- Recommended: 0.3.0-preview44+ (independent reflections in preview)\n- Minimum with new pipeline: 0.3.0-preview11\n- Absolute minimum: 0.2.11 (backward-compat legacy path; missing most new features; will be dropped next release)",
+        "min_csp_build": 3465,
+        "min_csp_label": "0.2.11",
+        "recommended_csp_build": 3973,
+        "recommended_csp_label": "0.3.0-preview440",
         "sources": [
           { "type": "Patreon", "url": "https://www.patreon.com/posts/skin-companion-0-119154121" }
-        ]
-      },
-      {
-        "version": "1.1.2",
-        "changelog": "# New\n- added skin preview thumbnails\n- added option to disable skin on specific cars\n# Fixes\n- fixed memory leak when switching sessions",
-        "min_csp_build": 2800,
-        "min_csp_label": "0.1.80",
-        "sources": [
-          { "type": "Patreon", "url": "https://www.patreon.com/posts/skin-companion-1-1-0" }
         ]
       }
     ]
